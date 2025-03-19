@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>趣味・特技 - 山田太郎のプロフィール</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- スタイルタグ：HTML文書内でCSSを直接記述するためのタグ -->
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 20px;
+        }
+
+        /* テーブルのセルの境界線を設定  実線solid*/
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th {
+            /* 下線を二重線に設定 枠線の幅（3ピクセル）枠線のスタイル（二重線） */
+            border-bottom: 3px double black;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>趣味・特技</h1>
+    </header>
+    <main>
+        <section>
+            <h2>趣味と特技</h2>
+            <button id="toggleHobbies">特技を表示</button>
+            <div id="hobbyContent">
+                <h3 style="margin-left: 20px;">趣味</h3>
+                <ol>
+                    <li>ゲーム(特にスマブラ)</li>
+                    <li>散歩</li>
+                    <li>謎解き</li>
+                    <li>投資</li>
+                    <li>家庭菜園</li>
+                </ol>
+            </div>
+            <div id="skillContent">
+                <table>
+                    <tr>
+                        <th>特技</th>
+                    </tr>
+                    <tr>
+                        <td>競技プログラミング（茶色）</td>
+                    </tr>
+                    <tr>
+                        <td>節約</td>
+                    </tr>
+                    <tr>
+                        <td>中学・高校理系科目の指導</td>
+                    </tr>
+                    <tr>
+                        <td>ゲーム</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="goals.html">訓練期間中の目標</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <script src="script/hobbies.js"></script>
+</body>
+
+</html>
