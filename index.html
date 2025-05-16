@@ -1,64 +1,145 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>木村拓人のプロフィール</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        #mainImage {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 3px solid #0d6efd;
+        }
+        .card-img-top {
+            height: 150px;
+            object-fit: contain;
+            padding: 1rem;
+            background-color: #ffffff;
+        }
+        .card {
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(13, 110, 253, 0.5);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Profile</h1>
-    </header>
+    <div class="container text-center">
+        <header>
+            <img id="mainImage" src="photo/pfofile.jpeg" alt="プロフィール画像" />
+            <h1 class="mb-4">木村拓人</h1>
+        </header>
 
-    <main>
-        <!--画像を追加 -->
-        <img id="mainImage" src="photo/pfofile.jpeg" alt="プロフィール画像">
-        <section>
-            <h2 id="profileName">木村拓人</h2>
-        </section>
-
-        <nav> <!-- ナビゲーションメニューをプロフィールセクションの下に配置 -->
-            <div class="image-grid">
-                <div class="image-item">
-                    <a href="self-introduction.html"><img src="photo/selfintroImage.png" alt="画像1">
-                    <p>自己紹介</p></a>
-                </div>
-                <div class="image-item">
-                    <li><a href="https://github.com/kimuratakuto1/"><img src="photo/github.png" alt="GitHub">
-                    <p>GitHub</p></a></li>
-                </div>
-                <div class="image-item">
-                    <li><a href="https://buy.stripe.com/test_6oEeVOeCJfdh9y08ww"><img src="photo/donate.png" alt="募金">
-                    <p>Stripe</p></a></li>
-                </div>
-                <div class="image-item">
-                    <a href="AtCoder.html"><img src="photo/programImage.png" alt="画像4">
-                    <p>競技<br>プログラミング</p></a>
-                </div>
-                <div class="image-item">
-                    <li><a href="https://ameblo.jp/tonakai0521/entrylist.html"><img src="photo/blog.png" alt="画像6">
-                    <p>ブログ</p></a></li>
-                </div>
-                <div class="image-item">
-                    <a href="hobbies.html"><img src="photo/gameImage.png" alt="画像2">
-                    <p>趣味・特技</p></a>
-                </div>
-                <div class="image-item">
-                    <a href="goals.html"><img src="photo/goalImage.png" alt="画像3">
-                    <p>目標</p></a>
-                </div>
-                <div class="image-item">
-                    <li><a href="contact.html"><img src="photo/contactImage.png" alt="画像5">
-                    <p>お問い合わせ</p></a>
+        <main>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <div class="col">
+                    <a href="self-introduction.html" class="text-decoration-none text-dark">
+                        <div class="card h-100">
+                            <img src="photo/selfintroImage.png" class="card-img-top" alt="自己紹介" />
+                            <div class="card-body">
+                                <h5 class="card-title">自己紹介</h5>
+                            </div>
+                        </div>
+                    </a>
                 </div>
 
+                <div class="col">
+                    <a href="https://github.com/kimuratakuto1/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                        <div class="card h-100">
+                            <img src="photo/github.png" class="card-img-top" alt="GitHub" />
+                            <div class="card-body">
+                                <h5 class="card-title">GitHub</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
-            <style>
-                li {
-                    list-style: none;
-                }
-            </style>
-        </nav>
-    </main>
+                <div class="col">
+                    <a href="https://buy.stripe.com/test_6oEeVOeCJfdh9y08ww" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                        <div class="card h-100">
+                            <img src="photo/donate.png" class="card-img-top" alt="募金" />
+                            <div class="card-body">
+                                <h5 class="card-title">Stripe募金</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="AtCoder.html" class="text-decoration-none text-dark">
+                        <div class="card h-100">
+                            <img src="photo/programImage.png" class="card-img-top" alt="競技プログラミング" />
+                            <div class="card-body">
+                                <h5 class="card-title">競技プログラミング</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://ameblo.jp/tonakai0521/entrylist.html" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
+                        <div class="card h-100">
+                            <img src="photo/blog.png" class="card-img-top" alt="ブログ" />
+                            <div class="card-body">
+                                <h5 class="card-title">ブログ</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="hobbies.html" class="text-decoration-none text-dark">
+                        <div class="card h-100">
+                            <img src="photo/gameImage.png" class="card-img-top" alt="趣味・特技" />
+                            <div class="card-body">
+                                <h5 class="card-title">趣味・特技</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="goals.html" class="text-decoration-none text-dark">
+                        <div class="card h-100">
+                            <img src="photo/goalImage.png" class="card-img-top" alt="目標" />
+                            <div class="card-body">
+                                <h5 class="card-title">目標</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="contact.html" class="text-decoration-none text-dark">
+                        <div class="card h-100">
+                            <img src="photo/contactImage.png" class="card-img-top" alt="お問い合わせ" />
+                            <div class="card-body">
+                                <h5 class="card-title">お問い合わせ</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle (Popper + Bootstrap JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
